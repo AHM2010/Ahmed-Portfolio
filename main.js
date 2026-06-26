@@ -121,11 +121,11 @@ form?.addEventListener("submit", (e) => {
   // Email subject and body with form data
   const subject = `New project from ${decodeURIComponent(name)}`;
   const body = `Name: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(
-    email
+    email,
   )}%0A%0A${decodeURIComponent(message)}`;
 
   // Open mail client (mailto link)
   window.location.href = `mailto:ahmed_ashraf2010@yahoo.com?subject=${encodeURIComponent(
-    subject
+    subject,
   )}&body=${body}`;
 });
