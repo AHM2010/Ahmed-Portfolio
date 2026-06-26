@@ -55,11 +55,20 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 /* Fade-in effect when page loads */
@@ -104,7 +113,10 @@ body.loaded {
   border: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--muted);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Hover effect for tags */
@@ -191,7 +203,9 @@ header .nav-links a {
   color: var(--muted);
   font-weight: 600;
   opacity: 0.8;
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
   margin: 0 0.7rem;
 }
 
@@ -217,7 +231,9 @@ header .nav-links a:hover {
   background-color: var(--surface);
   border: 1px solid var(--border);
   cursor: pointer;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Hamburger menu */
@@ -229,7 +245,9 @@ header .nav-links a:hover {
   background-color: var(--surface);
   border: 1px solid var(--border);
   cursor: pointer;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
   display: none;
 }
 
@@ -349,7 +367,9 @@ main {
 }
 
 .cta .btn {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .cta .btn:hover {
@@ -420,7 +440,7 @@ main {
 }
 
 .grid.cols-3 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid.cols-2 {
@@ -476,12 +496,29 @@ main {
 }
 
 .projects-container .btn {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .projects-container .btn:hover {
   background-color: #886818;
   color: #fff;
+}
+
+.projects-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+#showMoreBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.hidden-project {
+  display: none !important;
 }
 
 /* ================== Skills ================== */
@@ -497,7 +534,9 @@ main {
 }
 
 .skill-grid .skill {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .skill-grid .skill:hover {
@@ -624,7 +663,9 @@ textarea {
 }
 
 .btn.primary {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .btn.primary:hover {
@@ -677,4 +718,8 @@ footer {
 
 .fa-js {
   color: #f7df1e;
+}
+
+.fa-react {
+  color: #61dafb;
 }
