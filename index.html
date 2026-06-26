@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +117,7 @@
             <div class="hero-card">
               <span class="badge tag">Featured</span>
               <img
-                src="./images/laptop with code on screen.jpg"
+                src="./images/laptop-with-code-on-screen.jpg"
                 alt="laptop with code on screen"
               />
             </div>
@@ -132,11 +132,11 @@
           <span class="section-sub">Selected work I'm proud of</span>
         </div>
 
-        <div class="grid cols-3">
+        <div id="projectsGrid" class="grid cols-3">
           <!-- Project 1 -->
           <article class="project card">
             <img
-              src="./images/dahab menu screen.png"
+              src="./images/dahab-menu-screen.png"
               alt="Dahab Menu Website"
             />
             <div class="project-info">
@@ -169,7 +169,7 @@
           <!-- Project 2 -->
           <article class="project card">
             <img
-              src="./images/to do list app screen.png"
+              src="./images/to-do-list-app-screen.png"
               alt="To Do List App"
             />
             <div class="project-info">
@@ -198,6 +198,74 @@
               </div>
             </div>
           </article>
+
+          <!-- Project 3 -->
+          <article class="project card">
+            <img src="#" alt="Electro e-commerce app" />
+            <div class="project-info">
+              <h4>E-commerce App</h4>
+              <p>
+                Electro is a modern and responsive e-commerce application built
+                with React, Vite, and Tailwind CSS. Features include product
+                browsing, search, filtering, shopping cart management, and a
+                streamlined checkout experience, with a strong focus on
+                performance, scalability, and clean UI/UX.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="stack">
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="btn"
+                  href="#"
+                  aria-label="Live demo Project 3"
+                  target="_blank"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project card">
+            <img src="./images/advice-me-screen.png" alt="Advice Me Website" />
+            <div class="project-info">
+              <h4>Advice Me Website</h4>
+              <p>
+                A lightweight web app that delivers random advice with a clean
+                interface and smooth, interactive experience, so users can get
+                inspired anytime.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="stack">
+                <span class="tag">React</span>
+                <span class="tag">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="btn"
+                  href="https://ahm2010.github.io/advice-me/"
+                  aria-label="Live demo Project 4"
+                  target="_blank"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-footer">
+          <button id="showMoreBtn" class="btn primary" type="button">
+            Show more
+          </button>
         </div>
       </section>
 
@@ -221,6 +289,10 @@
           <div class="card skill">
             <i class="fa-brands fa-js"></i><strong>JavaScript</strong>
             <div class="muted">ES6+, DOM, APIs</div>
+          </div>
+          <div class="card skill">
+            <i class="fa-brands fa-react"></i><strong>React</strong>
+            <div class="muted">Components, Hooks, State</div>
           </div>
           <div class="card skill">
             <strong>Frameworks</strong>
@@ -355,6 +427,7 @@
           align-items: center;
           flex-wrap: wrap;
           gap: 12px;
+          padding: 0 12px;
         "
       >
         <!-- Dynamic Year (via JS) -->
