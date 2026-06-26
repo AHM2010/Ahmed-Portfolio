@@ -66,6 +66,48 @@ mobPanel?.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// --- Projects "Show more" toggle ---
+const projectsGrid = document.getElementById("projectsGrid");
+const showMoreBtn = document.getElementById("showMoreBtn");
+const projects = projectsGrid
+  ? Array.from(projectsGrid.querySelectorAll(".project"))
+  : [];
+let projectsExpanded = false;
+
+const getMaxVisibleProjects = () =>
+  window.matchMedia("(min-width: 1000px)").matches ? 3 : 2;
+
+const renderProjectVisibility = () => {
+  if (!showMoreBtn) return;
+
+  const maxVisible = getMaxVisibleProjects();
+  const hiddenCount = Math.max(0, projects.length - maxVisible);
+
+  projects.forEach((project, index) => {
+    const hideProject = !projectsExpanded && index >= maxVisible;
+    project.classList.toggle("hidden-project", hideProject);
+  });
+
+  if (hiddenCount > 0) {
+    showMoreBtn.textContent = projectsExpanded
+      ? "Show less"
+      : `Show ${hiddenCount} more`;
+  } else {
+    projectsExpanded = false;
+  }
+};
+
+showMoreBtn?.addEventListener("click", () => {
+  projectsExpanded = !projectsExpanded;
+  renderProjectVisibility();
+});
+
+window.addEventListener("resize", () => {
+  renderProjectVisibility();
+});
+
+renderProjectVisibility();
+
 // --- Contact Form ---
 // When the form is submitted, prevent normal submission and open email client with filled details
 form?.addEventListener("submit", (e) => {
